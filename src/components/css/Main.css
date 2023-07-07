@@ -1,0 +1,134 @@
+
+.card {
+  position: relative;
+  width: 80%;
+  height: 250px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px white, -20px -20px 60px #ffffff;
+  cursor: pointer;
+}
+.card:hover{
+
+  background-color: rgb(174, 144, 34);
+}
+.darkCard{
+  position: relative;
+  width: 80%;
+  height: 250px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 20px 20px 60px black, -20px -20px 60px black;
+}
+
+.darkCard:hover{
+  background-color:grey;
+}
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 94%;
+  height: 240px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.heading_card {
+  margin-top: 40%;
+  font-weight: bolder;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(105, 102, 102);
+  opacity: 1;
+  filter: blur(50px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.lightMode {
+  float: right;
+  color: white;
+  background: black;
+  padding: 3px 9px;
+  font-size: 17px;
+  margin-right: 100px;
+  bottom: 0px;
+  margin-top: 40px;
+  border-radius: 97px;
+  cursor: pointer;
+}
+.darkMode{
+  float: right;
+  color: black;
+  background: white;
+  padding: 3px 9px;
+  font-size: 17px;
+  margin-right: 100px;
+  bottom: 0px;
+  margin-top: 40px;
+  border-radius: 97px;
+  cursor: pointer;
+}
+
+#loader{
+  margin-top: 10%;
+}
+/* css for media query */
+@media screen and (max-width: 600px) {
+  .heading_card {
+    margin-top: 25%;
+  }
+  .darkMode{
+    margin-bottom: 30px;
+    margin-right: 20px;
+  }
+  .lightMode {
+    margin-bottom: 30px;
+    margin-right: 20px;
+  }
+}
